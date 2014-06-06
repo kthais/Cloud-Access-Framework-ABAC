@@ -1,0 +1,13 @@
+<ns:jbosspdp xmlns:ns="urn:jboss:xacml:2.0">
+   <ns:Policies>
+    
+      <ns:Policy>
+          <ns:Location>policies/Multiple_Subject_Test_D14Feb14T12.56.04.xml</ns:Location>
+     </ns:Policy>
+     
+   </ns:Policies>
+   <ns:Locators>
+      <ns:Locator Name="org.jboss.security.xacml.locators.JBossPolicySetLocator">
+      </ns:Locator>
+   </ns:Locators>
+</ns:jbosspdp>

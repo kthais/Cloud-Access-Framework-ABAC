@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Policy xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os" PolicyId="SingleSubjectTest" Version="2.0" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides">
+    <Description>Policy for a single subject test</Description>
+    <Target>
+    </Target>
+    <Rule RuleId="Rule-3" Effect="Permit">
+        <Description>Rule for single subject test</Description>
+        <Target>
+            <Subjects>
+                <Subject>
+                    <SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">jawad</AttributeValue>
+                        <SubjectAttributeDesignator SubjectCategory="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject" AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-name" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="false"/>
+                    </SubjectMatch>
+                </Subject>
+            </Subjects>
+        </Target>
+    </Rule>
+      <Rule RuleId="Default-Rule" Effect="Deny" />
+  
+</Policy>

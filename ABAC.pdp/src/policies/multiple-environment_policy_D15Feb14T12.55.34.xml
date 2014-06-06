@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Policy xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os" PolicyId="maangerpolicy" Version="2.0" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:first-applicable">
+    <Description>manager_policy _informaiton</Description>
+    <Target/>
+    <Rule RuleId="ruleformorningshift" Effect="Permit">
+        <Description>manager_rule information</Description>
+        <Target>
+            <Subjects>
+                <Subject>
+                    <SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">bilal</AttributeValue>
+                        <SubjectAttributeDesignator SubjectCategory="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject" AttributeId="urn:oasis:names:tc:xacml:1.0:subject:name" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="false"/>
+                    </SubjectMatch>
+                </Subject>
+            </Subjects>
+            <Resources>
+                <Resource>
+                    <ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Register</AttributeValue>
+                        <ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:register" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="false"/>
+                    </ResourceMatch>
+                </Resource>
+            </Resources>
+            <Actions>
+                <Action>
+                    <ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
+                        <ActionAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:openfile" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="false"/>
+                    </ActionMatch>
+                </Action>
+            </Actions>
+            <Environments>
+                <Environment>
+                    <EnvironmentMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">9-5</AttributeValue>
+                        <EnvironmentAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:time" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="false"/>
+                    </EnvironmentMatch>
+                </Environment>
+            </Environments>
+        </Target>
+    </Rule>
+    <Rule RuleId="rulefornightshift" Effect="Permit">
+        <Description>manager_rule information</Description>
+        <Target>
+            <Subjects>
+                <Subject>
+                    <SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">ali</AttributeValue>
+                        <SubjectAttributeDesignator SubjectCategory="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject" AttributeId="urn:oasis:names:tc:xacml:1.0:subject:name" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="false"/>
+                    </SubjectMatch>
+                </Subject>
+            </Subjects>
+            <Resources>
+                <Resource>
+                    <ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Register</AttributeValue>
+                        <ResourceAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:register" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="false"/>
+                    </ResourceMatch>
+                </Resource>
+            </Resources>
+            <Actions>
+                <Action>
+                    <ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
+                        <ActionAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:openfile" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="false"/>
+                    </ActionMatch>
+                </Action>
+            </Actions>
+            <Environments>
+                <Environment>
+                    <EnvironmentMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">9-5</AttributeValue>
+                        <EnvironmentAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:time" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="false"/>
+                    </EnvironmentMatch>
+                </Environment>
+                <Environment>
+                    <EnvironmentMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">5-9</AttributeValue>
+                        <EnvironmentAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:time" DataType="http://www.w3.org/2001/XMLSchema#string" MustBePresent="false"/>
+                    </EnvironmentMatch>
+                </Environment>
+            </Environments>
+        </Target>
+    </Rule>
+</Policy>
